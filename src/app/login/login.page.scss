@@ -1,0 +1,22 @@
+.login-btn {
+  text-align: center;
+  padding-top: 20px;
+  ion-button {
+    --border-radius: 3px;
+    width: 150px;
+  }
+}
+.no-account {
+  outline: none;
+  text-align: center;
+  span {
+    font-weight: 500;
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 13px;
+  padding-left: 15px;
+  margin: 0;
+}

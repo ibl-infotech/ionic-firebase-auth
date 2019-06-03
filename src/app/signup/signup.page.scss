@@ -1,0 +1,14 @@
+.signup-btn {
+  text-align: center;
+  padding-top: 20px;
+  ion-button {
+    --border-radius: 3px;
+    width: 150px;
+  }
+}
+.error-message {
+  color: red;
+  font-size: 13px;
+  padding-left: 15px;
+  margin: 0;
+}

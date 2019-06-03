@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Signup
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <form role="form" #signupform="ngForm" (ngSubmit)="signupform.form.valid && signup()">
+      <div>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" [(ngModel)]="user.email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" #email="ngModel" required
+            name="email"></ion-input>
+        </ion-item>
+        <div *ngIf="email.invalid && (email.touched)">
+          <p class="input-info error-message" *ngIf="email.errors.required">Email is
+            required
+          </p>
+          <p class="input-info error-message" *ngIf="email.errors.pattern">Enter valid email
+          </p>
+        </div>
+      </div>
+      <div>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="Password" [(ngModel)]="user.password" minlength="6" #password="ngModel" required
+            name="password">
+          </ion-input>
+        </ion-item>
+        <div *ngIf="password.invalid && (password.touched)">
+          <p class="input-info error-message" *ngIf="password.errors.required">Password is
+            required
+          </p>
+          <p class="input-info error-message" *ngIf="password.errors.minlength">Password must be
+            atleast 6 characters.
+          </p>
+        </div>
+      </div>
+
+      <div class="signup-btn">
+        <ion-button color="primary" type="submit">Signup</ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>
