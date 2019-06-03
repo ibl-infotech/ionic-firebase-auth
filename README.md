@@ -3,6 +3,6 @@
 ![](demo.gif)
 
 **Requirements**
-- ionic 5
+- ionic 4.1.0
 - Firebase
 
