@@ -1,6 +1,6 @@
 # ionic Firebase Auth
 
-![](demo.mp4)
+![](demo.gif)
 
 **Requirements**
 - ionic 5
